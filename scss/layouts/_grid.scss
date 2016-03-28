@@ -1,0 +1,34 @@
+.container {
+    max-width: $grid-width;
+    width: calc(100% - 28px);
+    margin: auto;
+
+    &--spaced {
+        margin-top: 32px;
+    }
+
+    .row {
+        @include clearfix;
+
+        @for $i from 1 through $grid-columns - 1
+        {
+            .col-#{$i} {
+                width:(100% / ($grid-columns / $i)) - $grid-gutter * ($grid-columns - $i) / $grid-columns;
+            }
+        }
+        .col-#{$grid-columns} { width:100%; }
+
+        &:not(:first-child) { margin-top: $grid-gutter; }
+
+        [class^="col-"] {
+            float:left;
+            margin-right: $grid-gutter;
+
+            @media screen and (max-width: $breakpoint-mobile-version) {
+                width: 100%;
+            }
+
+            &:last-child { margin-right:0%; }
+        }
+    }
+}

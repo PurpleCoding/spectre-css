@@ -1,0 +1,17 @@
+// Colors
+$color-white: #fafafa;
+
+// Grid
+$grid-width: 1152px;
+$grid-columns: 12;
+$grid-gutter: 2.2%;
+$grid-column-size: $grid-width / $grid-columns;
+
+// Breakpoints
+$breakpoint-phone:        320px;
+$breakpoint-wide-phone:   480px;
+$breakpoint-tablet:       768px;
+$breakpoint-wide-tablet:  1024px;
+
+$breakpoint-mobile-version: $breakpoint-tablet;
+$breakpoint-small-mobile-version: $breakpoint-wide-phone;
